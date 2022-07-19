@@ -5,9 +5,8 @@
  */
 
 const Router = require('koa-router')
-const { sqlMapper, sqlEntity } = require('../controller/mooriarty.controller')
+const { sqlMapperEntity } = require('../controller/mooriarty.controller')
 
 const router = new Router({prefix: '/mooriarty'})
-router.post('/sqlMapper',sqlMapper)
-router.post('/sqlEntity',sqlEntity)
+router.post('/sqlMapperEntity',sqlMapperEntity)
 module.exports = router.routes()

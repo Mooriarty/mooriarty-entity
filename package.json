@@ -15,8 +15,10 @@
     "koa": "^2.13.4",
     "koa-body": "^5.0.0",
     "koa-router": "^11.0.1",
+    "mysql": "^2.18.1",
     "mysql2": "^2.3.3",
-    "sequelize": "^6.21.3"
+    "sequelize": "^6.21.3",
+    "typeorm": "^0.3.7"
   },
   "devDependencies": {
     "nodemon": "^2.0.19"
