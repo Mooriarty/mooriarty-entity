@@ -8,6 +8,7 @@ const {getSeqConfig} = require('../db/seq')
 class MooriartyModel {
     getColumnsSQL(ip, userName, password) {
         let columnsSQL =  getSeqConfig(ip, userName, password).define('COLUMNS',{
+
             TABLE_SCHEMA:{
                 type: DataTypes.STRING(64),
                 comment: '库名'
@@ -23,6 +24,18 @@ class MooriartyModel {
             DATA_TYPE:{
                 type: DataTypes.TEXT,
                 comment: '字段类型'
+            },
+            COLUMN_COMMENT:{
+                type: DataTypes.TEXT,
+                comment: '字段注释'
+            },
+            COLUMN_KEY:{
+                type: DataTypes.TEXT,
+                comment: '主键标识'
+            },
+            ORDINAL_POSITION:{
+                type: DataTypes.INTEGER,
+                comment: '字段排序'
             }
         },{
             freezeTableName: true,

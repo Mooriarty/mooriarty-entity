@@ -15,6 +15,7 @@ class MooriartyService {
             tableSQLResponseBody.push(item.dataValues.TABLE_NAME)
         })
         return await getColumnsSQL(ip, userName, password).findAll({
+            order: [["ORDINAL_POSITION", "asc"]],
             where: {
                 [Op.and]: [{
                     TABLE_SCHEMA: tableSchema
